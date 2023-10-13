@@ -1,9 +1,11 @@
 const express = require("express");
+require('dotenv').config();
 const path = require("path");
 const app = express();
 const ejs  = require('ejs');
 const DB = require("./connectDB");
 const router = require("./route");
+
 let port = 3000;
 
 
