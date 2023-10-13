@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="container">
+    <div class="header"><h1>Task Manager</h1></div>
+    <div class="main">
+        <div class="addtask">
+            <button id="addtaskButton">New Task</button>
+        </div>
+        <div class="alltasks">
+            <% for (let i = 0; i < n; i++) { %>
+                <div class="dynamicDiv" >
+                    <!-- Content for each dynamic div -->
+                    <p> <%=re[i].taskName %></p>
+                    <button class="clickthis" id="<%= re[i].id%>"></button>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="overlay" style="display: none;">
+        <div class="formContainer">
+            <div><h1>Enter the Task</h1></div>
+        <div class="taskValue"><input type="text" id="taskinput"></div>
+        <button id="SubmitTask">Create</button>
+    </div>
+</div>
+    </div>
+    <script src="/js/functions.js"></script>
+</body>
+</html>

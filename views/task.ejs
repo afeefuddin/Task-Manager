@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/taskpage.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="overlay" style="display: none;">
+        <div class="confirmation">
+            <div><h1>Are you sure you want to delete this?</h1></div>
+            <div class="confirmButtons">
+                <button id="confirmDelete">Yes</button>
+                <button id="noDelete">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="taskBox">
+        <div class="taskDescription">
+            <%=re.taskName %>
+        </div>
+        <div class="delete">
+            <button id="deleteButton">Delete</button>
+        </div>
+    </div>
+    <script src="/js/taskpage.js"></script>
+</body>
+</html>
