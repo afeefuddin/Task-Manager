@@ -11,14 +11,14 @@
     <div class="header"><h1>Task Manager</h1></div>
     <div class="main">
         <div class="addtask">
-            <button id="addtaskButton">New Task</button>
+            <button id="addtaskButton">+</button>
         </div>
         <div class="alltasks">
             <% for (let i = 0; i < n; i++) { %>
                 <div class="dynamicDiv" >
                     <!-- Content for each dynamic div -->
                     <p> <%=re[i].taskName %></p>
-                    <button class="clickthis" id="<%= re[i].id%>"></button>
+                    <button class="clickthis" id="<%= re[i].id%>"><img src="/assets/view.png" alt=""></button>
                 </div>
             <% } %>
         </div>
