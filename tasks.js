@@ -1,7 +1,7 @@
-const {  BSON } = require('mongodb');
-const ObjectId = require('mongodb').ObjectId;
+const {  BSON ,ObjectId } = require('mongodb');
 const { get } = require('./route');
 const Task = require('./taskmogoose');
+const { query } = require('express');
 const createTask = async (req,res)=>{
     try{
         const task = new Task();
@@ -37,6 +37,7 @@ const getAllTasks = async(req,res)=>{
 const getTask = async(req,res) =>{
     let param = req.query.id;
     let data = {};
+    data.id = param;
     console.log(param);
     try{
         const task = await Task.findById(param)
@@ -58,11 +59,16 @@ const getTask = async(req,res) =>{
     }
 }
 const deleteTask = async(req,res) =>{
+    const id = req.body.id;
+
     try{
-        const tasks = await Task.findOneAndDelete({req});
-        res.status(200).json({tasks});
-    }
+        
+        const tasks = await Task.findByIdAndDelete(id);
+        console.log("Deleted here")
+        res.status(302).json({tasks})
+        }
     catch(error) {
+        console.log("Error Deleteing")
         res.status(500).json({msg : error});
     }
 }
