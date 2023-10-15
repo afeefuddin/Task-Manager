@@ -14,9 +14,15 @@
             <button id="addtaskButton">+</button>
         </div>
         <div class="alltasks">
+            <%if (n===0){ %>
+                <div class="noTask">
+                    No Task to Display
+                </div>
+                <% } %>
             <% for (let i = 0; i < n; i++) { %>
                 <div class="dynamicDiv" >
                     <!-- Content for each dynamic div -->
+                    <input type="checkbox" class="completed" id="<%= re[i].id%>">
                     <p> <%=re[i].taskName %></p>
                     <button class="clickthis" id="<%= re[i].id%>"><img src="/assets/view.png" alt=""></button>
                 </div>
@@ -25,6 +31,7 @@
     </div>
     <div class="overlay" style="display: none;">
         <div class="formContainer">
+            <button class="cross">X</button>
             <div><h1>Enter the Task</h1></div>
         <div class="taskValue"><input type="text" id="taskinput"></div>
         <button id="SubmitTask">Create</button>

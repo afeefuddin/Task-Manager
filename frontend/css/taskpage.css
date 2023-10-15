@@ -25,3 +25,9 @@
     display: flex;
     flex-direction: row;
 }
+.taskBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

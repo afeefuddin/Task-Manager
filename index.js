@@ -19,7 +19,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static('./frontend'));
 // app.set('views', __dirname + '/views'); 
 // app.use(express.json());
-
 app.set("view engine", "ejs")
 app.use(router);
 
