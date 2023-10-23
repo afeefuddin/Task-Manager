@@ -10,7 +10,6 @@ const id =  elem.id;
 let data = { 
     id : id,
 }
-console.log(data);
 yes.addEventListener('click',(e)=>{
     fetch('/getTask',{
          method: 'DELETE',
@@ -22,7 +21,6 @@ yes.addEventListener('click',(e)=>{
         if (response.status === 302) {
             // A 302 status code indicates a temporary redirect
             // You can navigate to the new location specified in the 'Location' header
-            console.log("Here now")
             window.location = 'http://localhost:3000/';
           }
     }).catch(err=>{

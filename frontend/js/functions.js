@@ -16,7 +16,6 @@ SubmitTask.addEventListener('click',(e)=>{
         taskName: taskValue,
         completed: false
       };
-    console.log(taskValue)
     fetch('/',{
         method:'POST',
         headers: {
@@ -36,7 +35,6 @@ let id = null;
 for (let i = 0; i < taskElements.length; i++) {
   taskElements[i].addEventListener('click', (e) => {
     const elementId = e.currentTarget.id;
-    console.log(elementId);
         fetch(`/getTask?id=${elementId}`, {
       method: 'GET',
       headers: {
@@ -60,7 +58,6 @@ let idcheck = null;
 for (let i = 0; i < checkbox.length; i++) {
   checkbox[i].addEventListener('change', (e) => {
     const elementId = e.currentTarget.id;
-    console.log(elementId);
     let data = { 
       id : elementId,
   }
