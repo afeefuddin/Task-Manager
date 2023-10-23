@@ -6,7 +6,7 @@ const ejs  = require('ejs');
 const DB = require("./connectDB");
 const router = require("./route");
 
-let port = 3000;
+let port = process.env.PORT;
 
 
 const bodyParser = require('body-parser');
