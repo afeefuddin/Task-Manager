@@ -110,3 +110,32 @@
 .clickthis img{
     height: 20px;
 }
+
+@media screen and (width<1500px){
+    .formContainer{
+        width: 60%;
+    }
+}
+@media screen and (width<700px){
+    .formContainer{
+        width: 75%;
+        height: 25%;
+    }
+    .textTask {
+        font-size:25px;
+    }
+}
+@media screen and (width<500px){
+    .formContainer{
+        width: 85%;
+        height: 25%;
+    }
+    #taskinput{
+        height: 25px;
+    }
+    .addtask{
+        position: fixed;
+        bottom: 35px;
+        right: 35px;
+    }
+}

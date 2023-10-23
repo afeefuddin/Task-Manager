@@ -21,7 +21,9 @@ yes.addEventListener('click',(e)=>{
         if (response.status === 302) {
             // A 302 status code indicates a temporary redirect
             // You can navigate to the new location specified in the 'Location' header
-            window.location = 'http://localhost:3000/';
+            let url = 'https://finishit.onrender.com/';
+            console.log(url);
+            window.location = url;
           }
     }).catch(err=>{
         console.log(err);
